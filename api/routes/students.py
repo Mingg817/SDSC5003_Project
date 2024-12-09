@@ -23,8 +23,8 @@ router = APIRouter(
 )
 def create_student(student: Student, db: Session = Depends(get_db)):
     # cheak if the student already exists
-    student = db.query(Student).filter(Student.student_id == student.student_id).first()
-    if student:
+    check = db.query(Student).filter(Student.student_id == student.student_id).first()
+    if check:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN, detail="Student already exists"
         )
