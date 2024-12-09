@@ -58,11 +58,11 @@ class Student(SQLModel, table=True):
         "json_schema_extra": {
             "examples": [
                 {
-                    "student_id": "S001",
-                    "name": "Alice",
-                    "gender": "F",
-                    "birth_date": "2000-01-01",
-                    "class_id": "C001"
+                "birth_date": "2000-01-01",
+                "class_id": "C001",
+                "gender": "M",
+                "name": "Michael",
+                "student_id": "S005"
                 }
             ]
         }
@@ -126,7 +126,7 @@ class Score(SQLModel, table=True):
                 {
                     "score_id": 1,
                     "student_id": "S001",
-                    "course_id": "CS101",
+                    "course_id": "C101",
                     "score": 95.0
                 }
             ]
